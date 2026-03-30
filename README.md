@@ -1,7 +1,6 @@
 서버 on: uvicorn app.main:app --reload
 포트 설정할 땐 뒤에 --port 8080, 기본은 8000
 
-
 API 서버 주소: http://192.168.0.64:8000
 테스트(Swagger) 문서: http://192.168.0.64:8000/docs
 
