@@ -1,10 +1,13 @@
+# DB 테이블을 파이썬 코드로 번역
+# DB에 저장되는 원본 테이블 형태
+
 from sqlalchemy import Column, Integer, String, Float, DateTime, ForeignKey, Boolean
 from datetime import datetime
 from app.db.database import Base
 
 class Jetson(Base):
     __tablename__ = "jetson"
-    jetson_id = Column(Integer, primary_key=True, index=True)
+    jetson_id = Column(Integer, primary_key=True, index=True) # AUTO_INCREMENT(자동 증가)
     jetson_wp = Column(String(10))
     jetson_loc = Column(String(20))
     status = Column(Boolean)

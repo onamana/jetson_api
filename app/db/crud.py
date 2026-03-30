@@ -1,3 +1,5 @@
+# 통신 규격(schemas)에 맞춰서 데이터가 들어오면 DB 구조(models)에 맞춰서 CRUD
+
 from sqlalchemy.orm import Session
 from app.db import models
 from app import schemas

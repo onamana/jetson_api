@@ -1,3 +1,6 @@
+# 스마트폰 앱이 접속할 수 있는 주소(URL)
+# 어떤 모듈의 어떤 함수를 호출할건지 결정
+
 from fastapi import APIRouter, Depends
 from sqlalchemy.orm import Session
 from typing import List
@@ -34,6 +37,6 @@ def trigger_hazard_alert(alert: schemas.HazardAlert, db: Session = Depends(get_d
     안전 감지 모듈이나 카메라 모듈이 위험을 감지하면 이 API를 호출합니다.
     API 서버는 이 정보를 받아 스마트폰 앱으로 푸시 알림을 전달합니다.
     """
-    print(f"🚨 [위험 감지!] 젯슨 {alert.jetson_id} / 센서 {alert.sen_id} : {alert.detail}")
+    print(f"🚨 [위험 감지!] 젯슨 {alert.jetson_id} / 센서 {alert.sen_id} : {alert.detail}") # 젯슨 id, 센서 id, 디테일 내용
     # 실제 앱 알림(FCM, 웹소켓 등) 전송 로직이 들어갈 자리
     return {"message": "Alert sent to App successfully", "data": alert}

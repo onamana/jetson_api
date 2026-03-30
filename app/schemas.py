@@ -1,3 +1,6 @@
+# 스마트폰에서 받은 JSON 데이터가 규격에 맞는지 검사
+# app/models.py에는 DB 구조가 존재하고, schemas.py에는 통신 규격이 존재하는 것
+
 from pydantic import BaseModel
 from typing import List, Optional
 
