@@ -85,3 +85,5 @@ class CameraInfo(Base):
     ip_address = Column(String(45), nullable=False)
     camera_id = Column(String(255), nullable=False)  
     camera_pw = Column(String(255), nullable=False)
+    # 🌟 새로 추가된 컬럼 (기본값 True)
+    health = Column(Boolean, default=True, comment="작동 상태 (1: 정상, 0: 비정상)")

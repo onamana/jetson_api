@@ -8,7 +8,6 @@ from zeroconf.asyncio import AsyncZeroconf
 
 from app.db.database import SessionLocal, engine
 from app.db import models, crud
-from app.routers.api_module import manager
 from app.routers import api_module
 
 # 1. DB 테이블 자동 생성
